@@ -1,0 +1,68 @@
+        ============================
+         José Julio López Márquez
+        ============================
+         Paradigmas de programacion 
+         Matematica Algoritmica Sep     
+         ESFM-IPN         Sep 2023
+       =============================
+
+     COMANDOS LINUX
+
+ls:listado de archivos y carpetas
+cd(nombre del directorio):cambio del directorio
+cd .. :subir al directorio madre 
+cd . : subir al home
+pwd : present working directory
+cd : /home/alumno/documentos
+rm(nombre del archivo) : borrar archivos 
+rm *:Borra todo lo del directorio
+rm-r:borra todo lo que tengas 
+rmdir: borrar directorios
+mkdir: hacer un directorio 
+ps -ef: muestra los pro0cesos
+kill -q (PID): procesos ID
+
+
+
+    COMANDOS VI
+
+esc: salir de modo escritura 
+R: modo escritura remplazando
+i: modo escritura insertando 
+x: borrado de letras
+dd: borrado de renglon
+D: borrar a partir de este punto
+o: abrir renglon abajo
+O: abrir renglon arriba
+:q ----> salir
+:wq-----> guardar y salir
+:w------>guardar 
+:q1----> salir sin guardar
+/palabra------>busca palabra
+n----->proxima aparicion de palabra 
+N------->anterior aparicion de palabra
+:100------>ir a la linea 100
+:$---->ir a la ultima linea
+
+
+     COMANDOS DE GIT 
+
+----Configurar 
+git config  --Public user.name jlopez00001
+
+git config  --Public user.email jjuliolopezm1612@gmail.com
+
+----Trabajar con git 
+
+rm -r  : Directorio viejo
+git clone https.//github.com/( REPOSITORIO)
+
+
+----Trabajar con archivos 
+git add .
+git commit -m "Manual"
+git push
+
+
+
+
