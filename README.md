@@ -1,0 +1,2 @@
+# nube
+primer repositorio
