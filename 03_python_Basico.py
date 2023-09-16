@@ -103,8 +103,8 @@ capitales["Mexico"] = "CDMX"
 print (capitales )
 
 # Borrar dato del diccionario
- del capitales ["Mexico"]
- print (capitales)
+del capitales ["Mexico"]
+print (capitales)
 
 # Borrar todo el diccionario 
 del capitales 
