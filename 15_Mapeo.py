@@ -39,7 +39,7 @@ print (cubos )
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Funciones dentro de funciones 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++
-def en_mayuscula(texto):
+def en_mayusculas(texto):
     return texto.upper()
 def en_minusculas(texto):
     return texto.lower()
@@ -72,7 +72,7 @@ división = divisor(2)
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # La usamos para calcular 3/2
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++
-print (divición (3))
+print (división (3))
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Uso de la función map con una lista 
