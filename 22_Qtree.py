@@ -3,19 +3,27 @@
 #++++++++++++++++++++++++++++++++++++
 # Matemática Algoritmica
 # Paradigmas de de progrmación 
-# ESFM IPN Septiembre 2023
+# ESFM IPN nov_2023
 #+++++++++++++++++++++++++++++++++++++++
 
-
+#++++++++++++++++++++++++++++++++++++++++
+#Pquetes externos
 #+++++++++++++++++++++++++++++++++++++++
-import random 
+import random                   # generador de números al azar
 import matplotlib.pyplot as plt # biblioteca para graficar
 import matplotlib.patches as patches
 
+#+++++++++++++++++++++++++++++++++++++++++++
+# Particula(x,y)
+#+++++++++++++++++++++++++++++++++++++++++++
 class Particula():
     def __init__(self,x:float,y:float):
         self.x=x
         self.y=y
+#+++++++++++++++++++++++++++++++++++++++++++++++
+# Cajas para las particulas definidas por la esquina inferior izquierda
+#(x0,y0): esquina (w,h): ancho y alto de la caja 
+#+++++++++++++++++++++++++++++++++++++++++++++++++++
 class Nodo():
 
     def __init__(self,x0:float,y0:float,w:float,h:float,particulas):
@@ -34,7 +42,11 @@ class Nodo():
 
     def get_particulas(self):
         return self.particulas
-
+#+++++++++++++++++++++++++++++++++++++++++++++++
+# Función subdivición de cajas ( en cuatro hijas)
+# se llama asi misma paa seguir dividiendo
+# a las siguientes generaciones
+#+++++++++++++++++++++++++++++++++++++++++++++++++++
 def subdivision_recursiva(nodo:Nodo, k:int):
     if len (nodo.particulas)<=k:
         return
@@ -60,7 +72,9 @@ def subdivision_recursiva(nodo:Nodo, k:int):
 
     nodo.hijos = [nodo.x1, nodo.x2, nodo.x3, nodo.x4]
 
-
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Función para incuir particulas en una caja
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 def cuantas_contiene(x:float , y:float, w:float, h:float,particulas):
     pts =[]
     for particula in particulas :
@@ -68,7 +82,9 @@ def cuantas_contiene(x:float , y:float, w:float, h:float,particulas):
             pts.append(particula)
 
     return pts 
-
+#+++++++++++++++++++++++++++++++++++++++++++++++++++
+# Función para enontrar cajas
+#++++++++++++++++++++++++++++++++++++++++++++++++++++
 def encontrar_hijos(nodo):
     if not nodo.hijos:
         return [nodo]
@@ -78,7 +94,12 @@ def encontrar_hijos(nodo):
             hijos+= (encontrar_hijos(hijo))
 
     return hijos
-
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Objeto quad tree es un árbol de cuatro ramas por nodo 
+# para agrupar particulas en una caja y acelerar los cálculos
+# con n particulas 
+# las cajas contienen máximo k particulas
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 class QTree():
    def __init__(self, k:int, n:int):
         self.umbral =k
@@ -112,7 +133,9 @@ class QTree():
        plt.plot(x,y,'ro') # muestra las particuls como puntos rojos
        plt.show()
        return 
-
+#++++++++++++++++++++++
+#programa principal 
+#++++++++++++++++++++++
 
 qtree = QTree(5,1000)
 qtree.subdividir()
