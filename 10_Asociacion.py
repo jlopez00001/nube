@@ -13,7 +13,7 @@ class A:
     _c:float=0.0
 
 
-    def _init_(self,a:float,b:float,c:float):
+    def __init__(self,a:float,b:float,c:float):
         self.a=a
         self.b=b
         self.c=c
@@ -25,7 +25,7 @@ class B:
     _d:float=0.0
     _e:float=0.0
 
-    def _init_(self,d:float,e:float):
+    def __init__(self,d:float,e:float):
         self.d =d
         self.e =e
 
@@ -52,7 +52,7 @@ class C:
     _e:float=0.0
     _Aa:A=None 
 
-    def _init_ (self,d:float,e:float):
+    def __init__ (self,d:float,e:float):
         self.d =d
         self.e=e
         # A está intanciado dentro 
@@ -81,7 +81,7 @@ class C:
      Aa:A=None
 
 
-     def _init_(self,d:float,e:float,Aa:A):
+     def __init__(self,d:float,e:float,Aa:A):
          self.d
          self.e
          self.Aa=Aa
