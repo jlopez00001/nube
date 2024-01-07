@@ -16,12 +16,12 @@ class Computadora:
     #+++++++++++++++++++++++++++++++++++++++++++++++++++++
     #  Constructor 
     #+++++++++++++++++++++++++++++++++++++++++++++++++++++
-    def _init_ (self,marca:str, capacidad:int , ram:int):
+    def __init__ (self,marca:str, capacidad:int , ram:int):
         print(f"accediendo al constrictor de la pc : {marca} con almacenaminento de {self.capacidad}GB Y memoria de {self.ram}GB")
         # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         # Destructor 
         #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        def _del_(self):
+        def __del__(self):
             print(f"Se elimino la computadora : {self.marca}")
 
 
@@ -38,7 +38,7 @@ class persona:
     #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     # Contructor de persona 
     #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    def _init_ (self , nombres : str, apellidos : str, edad:int , direccion: str ,marca:str , capacidad:int,ram:int ):
+    def __init__(self , nombres : str, apellidos : str, edad:int , direccion: str ,marca:str , capacidad:int,ram:int ):
         self.nombres = nombres 
         self.apellidos = apellidos 
         self.edad = edad
@@ -57,7 +57,7 @@ class persona:
        #+++++++++++++++++++++++++++++++++++++++++++
        # Destructor 
        #+++++++++++++++++++++++++++++++++++++
-       def _del_(self):
+       def __del__(self):
            print (f"----Eliminamos a la persona... {self.nombres} {self.apellidos}")
 
 
