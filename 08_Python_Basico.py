@@ -38,7 +38,7 @@ class Llanta:
     # pero puede ser otro nombre (mi)
     # parametros de entrada = default
     #****************************************************+
-    def _int_(mi,radio=50,ancho=30,presión =1.5):
+    def __int__(mi,radio=50,ancho=30,presión =1.5):
         # Variable de la estructura completa llanta 
         Llanta.cuenta +=1
         # Variables exclusivas de cada objeto
@@ -58,7 +58,7 @@ llanta4 = Llanta (40,30,1.6)
 # Objeto que contiene otros objetos 
 #********************************************************
 class Coche:
-    def _int_(mi,ll1,ll2,ll3,ll4):
+    def __int__(mi,ll1,ll2,ll3,ll4):
         mi.llanta1 = ll1
         mi.llanta2 = ll2
         mi.llanta3 = ll3 
@@ -81,7 +81,7 @@ print("Presión de la llanta 1 de mi coche =", micoche.llanta1.presión)
 # Uso de la función de python property para poner y obtener atributos
 #*******************************************************************
 class Estudiantes :
-    def _int_ (mi): 
+    def __int__(mi): 
         mi._nombre =  ''
 
     def ponerme_nombre (mi,nombre):
@@ -119,7 +119,7 @@ print (estudiante.nombre)
 # Herencia de clases
 #*********************************************************
 class Cuadrilatero:
-    def _int_(mi, a,b,c,d):
+    def __int__(mi, a,b,c,d):
         mi.lado1=a
         mi.lado2=b
         mi.lado3=c
@@ -138,7 +138,7 @@ class Cuadrilatero:
 # Rectangulo (Cuadrilatero)
 #*****************************************************
 class Rectangulo (cuadrilatero):
-    def _int_ (self ,a,b):
+    def __int__ (self ,a,b):
         #************************************
         # Constructor de su madre 
         #*******************************************
@@ -149,7 +149,7 @@ class Rectangulo (cuadrilatero):
 # Hijo de Rectangulo
 #********************************************
 class Cuadrado (Rectangulo):
-    def _init_(self,a)
+    def __init__(self,a)
     super()._init_(a,a)
 
 def area (self):
